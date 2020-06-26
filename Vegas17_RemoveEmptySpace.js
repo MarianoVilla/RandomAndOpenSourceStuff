@@ -19,7 +19,7 @@ try {
         if (!track.Selected) continue;
         var tracktime = new Timecode(0);
         for (var evnt in track.Events) {
-            evnt.AdjustStartLength(tracktime, evnt.Length, true);
+            evnt.AdjustStartLength(tracktime, evnt.Length, false);
             tracktime = tracktime + evnt.Length;
         }
     }
